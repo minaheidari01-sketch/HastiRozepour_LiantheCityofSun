@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png"
+        href="./images/Gemini_Generated_Image_jr5jpejr5jpejr5j-removebg-preview.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Mirza:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Boushehr</title>
+
+    <style>
+        :root {
+            --main-color: #91C6BC;
+            --second-color: #4B9DA9;
+            --thired-color: #F6F3C2;
+            --primary-color: #E37434;
+
+        }
+
+        /* ===== GLOBAL SAFETY RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Mirza", serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav_ul {
+            flex-direction: row-reverse;
+        }
+
+        .header,
+        .section2_container,
+        .text_speace {
+            text-align: right;
+        }
+
+        /* ===== NAVBAR ===== */
+
+        .nav_countainer {
+            height: 80px;
+            width: 100%;
+            padding: 0 40px;
+            background-color: var(--second-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+
+        }
+
+        /* ===== LOGO ===== */
+        .nav_logo_place {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav_logo {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        /* ===== RIGHT SIDE ===== */
+        .nav-text {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        /* ===== NAV LIST ===== */
+        .nav_ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-direction: row-reverse;
+        }
+
+        /* ===== NAV ITEMS ===== */
+        .nav_ul_li {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        /* ===== LINKS ===== */
+        .nav_ul_li a {
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            padding: 4px 0;
+            transition: color 0.25s ease;
+        }
+
+        .nav_ul_li a:hover {
+            color: var(--thired-color);
+        }
+
+        /* ===== UNDERLINE HOVER ===== */
+        .nav_ul_li a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: var(--thired-color);
+            transition: width 0.25s ease;
+            margin-top: 6px;
+        }
+
+        .nav_ul_li a:hover::after {
+            width: 100%;
+        }
+
+       
+
+        /* ===== HEADER / HERO SECTION ===== */
+        .header {
+            min-height: 80vh;
+            width: 100%;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)),
+                url("./images/Bushehr.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* ===== CONTENT WRAPPER ===== */
+        .header>div {
+            max-width: 700px;
+            color: #ffffff;
+        }
+
+        /* ===== TITLE ===== */
+        .header_title {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        /* ===== DESCRIPTION ===== */
+        .header_des {
+            display: block;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        /* ===== BUTTON ===== */
+        .header_button {
+            display: inline-block;
+            padding: 14px 34px;
+            border-radius: 30px;
+            background-color: var(--second-color);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .header_button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgb(75, 157, 169);
+        }
+
+        /* ===== SECTION ===== */
+        .nav_cards {
+            padding: 80px 40px;
+            background: linear-gradient(to bottom, #91C6BC, #f5fbfc);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+        }
+
+        /* ===== CARD ===== */
+        .cards {
+            background: var(--second-color);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 109, 119, 0.15);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        /* make full card clickable */
+        .cards a {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            padding: 26px;
+            gap: 22px;
+            color: #1f3b3d;
+        }
+
+        /* ===== IMAGE ===== */
+        .card_image {
+
+            border-radius: 18px;
+            padding: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card_image img {
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.35s ease;
+        }
+
+        /* ===== TEXT ===== */
+        .card_text {
+            font-size: 40px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        /* ===== HOVER EFFECT ===== */
+        .cards:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 26px 60px rgba(0, 109, 119, 0.3);
+        }
+
+        .cards:hover img {
+            transform: scale(1.1);
+        }
+
+        /* soft sea-glow */
+        .cards::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            background: linear-gradient(120deg,
+                    rgba(126, 209, 214, 0.35),
+                    rgba(255, 255, 255, 0));
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+        }
+
+        .cards:hover::after {
+            opacity: 1;
+        }
+
+        /* ===== SECTION BASE ===== */
+        .section2 {
+            padding: 100px 40px;
+            background: linear-gradient(to bottom, #f5fbfc, #ffffff);
+            display: flex;
+            flex-direction: column;
+            gap: 120px;
+
+        }
+
+        /* ===== SPLIT ROW ===== */
+        .section2_container {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            background-color: var(--second-color);
+            padding: 50px;
+            border-radius: 10px;
+
+        }
+
+        /* reverse second row */
+        .section2_container:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+
+        /* ===== IMAGE SIDE ===== */
+        .section_2_img {
+            width: 50%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 28px;
+            box-shadow: 0 30px 70px rgba(0, 109, 119, 0.25);
+        }
+
+        /* ===== TEXT SIDE ===== */
+        .section_2_text {
+            width: 50%;
+            padding: 0 80px;
+            font-size: 16.5px;
+            line-height: 2;
+            color: white;
+
+        }
+
+
+
+        /* ===== SECTION ===== */
+        .wave-gallery {
+            position: relative;
+            background-color: var(--main-color);
+            padding: 120px 40px;
+            overflow: hidden;
+        }
+
+        /* ===== WAVES ===== */
+        .wave-top,
+        .wave-bottom {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .wave-top {
+            top: 0;
+            transform: rotate(180deg);
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 134' xmlns='http://www.w3.org/2000/svg'><path d='M0 1C19.5 3 32 5 51.5 9C104.5 19 200 43 300 65C400 88 500 111 600 102C700 93 800 53 900 30C987.5 5 1085 -1 1150 0C1169.5 -1 1180.5 0 1200 1V134H0V1Z' fill='%23ffffff'/></svg>");
+        }
+
+        .wave-bottom {
+            bottom: 0;
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 134' xmlns='http://www.w3.org/2000/svg'><path d='M0 1C19.5 3 32 5 51.5 9C104.5 19 200 43 300 65C400 88 500 111 600 102C700 93 800 53 900 30C987.5 5 1085 -1 1150 0C1169.5 -1 1180.5 0 1200 1V134H0V1Z' fill='%23ffffff'/></svg>");
+        }
+
+        /* ===== GALLERY GRID ===== */
+        .gallery {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 32px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* ===== CARD ===== */
+        .gallery-card {
+            background: var(--thired-color);
+            border-radius: 22px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        /* ===== IMAGE ===== */
+        .gallery-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 16px;
+            transition: transform 0.35s ease;
+        }
+
+        /* ===== TEXT ===== */
+        .gallery-text {
+            display: block;
+            margin-top: 14px;
+            font-size: 14px;
+            color: var(--primary-color);
+            opacity: 0;
+            transform: translateY(-8px);
+            transition: all 0.35s ease;
+        }
+
+        /* ===== HOVER EFFECT ===== */
+        .gallery-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 28px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-card:hover .gallery-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text_speace {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 36px 48px;
+
+            background: linear-gradient(135deg,
+                    rgb(145, 198, 188),
+                    rgb(75, 157, 169));
+
+            border-radius: 24px;
+            border-left: 6px solid var(--second-color);
+
+            font-size: 16.5px;
+            line-height: 2;
+            color: white;
+
+            box-shadow: 0 18px 50px rgba(0, 109, 119, 0.2);
+        }
+
+        /* subtle emphasis on hover */
+        .text_speace:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 26px 70px rgba(0, 109, 119, 0.3);
+            transition: all 0.35s ease;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(to bottom, #91C6BC, #4B9DA9);
+            color: #e9f6f7;
+            padding: 80px 40px 30px;
+        }
+
+        /* ===== FOOTER GRID ===== */
+        .footer_container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        /* ===== TITLES ===== */
+        .footer_title {
+            font-size: 28px;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .footer_heading {
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+
+        /* ===== TEXT ===== */
+        .footer_text {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* ===== LINKS ===== */
+        .footer_links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer_links li {
+            margin-bottom: 10px;
+            font-size: 14.5px;
+        }
+
+        .footer_links a {
+            text-decoration: none;
+            color: #d8f0f1;
+            transition: color 0.25s ease, padding-left 0.25s ease;
+        }
+
+        .footer_links a:hover {
+            color: #ffffff;
+            padding-left: 6px;
+        }
+
+        /* ===== BOTTOM BAR ===== */
+        .footer_bottom {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 60px 20px 25px;
+            }
+
+            .footer_title {
+                font-size: 24px;
+            }
+        }
+
+
+        @media(max-width:850px) {
+            .wave-container::before {
+                height: 13px
+            }
+        }
+
+
+
+
+
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav_countainer {
+                padding: 0 20px;
+            }
+
+            .nav_ul {
+                gap: 16px;
+            }
+
+            .nav_ul_li {
+                font-size: 14px;
+            }
+
+            .tran_button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .header_title {
+                font-size: 2.6rem;
+            }
+
+            .header_des {
+                font-size: 1rem;
+            }
+
+            .nav_cards {
+                padding: 60px 20px;
+                gap: 24px;
+            }
+
+            .card_text {
+                font-size: 14px;
+            }
+
+            .wave-gallery {
+                padding: 100px 20px;
+            }
+
+            .gallery-card img {
+                height: 140px;
+            }
+
+            .text_speace {
+                margin: 70px 20px;
+                padding: 28px 24px;
+                font-size: 15px;
+            }
+
+            .gallery-text {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .section_2_text {
+                width: 50%;
+                padding: 0px;
+                font-size: 16.5px;
+                line-height: 2;
+                color: white;
+
+            }
+        }
+            @media (max-width: 900px) {
+
+                .section2_container,
+                .section2_container:nth-child(2) {
+                    flex-direction: column;
+                    gap: 32px;
+                    text-align: center;
+                }
+
+                .section_2_img,
+                .section_2_text {
+                    width: 100%;
+                }
+            }
+
+    </style>
+</head>
+
+
+<body>
+    <nav class="nav_countainer">
+        <div class="nav_logo_place"><img src="./images/Gemini_Generated_Image_jr5jpejr5jpejr5j-removebg-preview.png"
+                alt="logo" class="nav_logo"></div>
+        <div class="nav-text">
+            <ul class="nav_ul">
+
+                <li class="nav_ul_li"><a href="./pg.html">خلیج فارس</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="./bgh.html">بافت قدیم</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="./tsh.html">تاریخچه شهر</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="./mt.html">مکان های توریستی</a></li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+    <header class="header">
+        <div>
+            <h1 class="header_title">بوشهر</h1>
+            <span class="header_des">بوشهر، دروازه‌ای آفتابی به خلیج فارس؛ جایی که دریا، تاریخ و زندگی به هم
+                می‌رسند</span>
+            <span class="header_button">خرید بلیت</span>
+        </div>
+    </header>
+    <section class="nav_cards">
+        <div class="cards"><a href="./pg.html">
+                <div class="card_image"><img src="./images/win1-removebg-preview.png" alt=""></div>
+                <div class="card_text">خلیج فارس
+                </div>
+            </a>
+        </div>
+        <div class="cards"><a href="./bgh.html">
+                <div class="card_image"><img src="./images/win2-removebg-preview.png" alt=""></div>
+                <div class="card_text">بافت قدیم
+                </div>
+            </a>
+        </div>
+        <div class="cards"><a href="./tsh.html">
+                <div class="card_image"><img src="./images/win3-removebg-preview.png" alt=""></div>
+                <div class="card_text">تاریخچه شهر
+                </div>
+            </a>
+        </div>
+        <div class="cards"><a href="./mt.html">
+                <div class="card_image"><img src="./images/win4-removebg-preview.png" alt=""></div>
+                <div class="card_text">مکان های توریستی
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="section2">
+        <div class="section2_container"><img class="section_2_img" src="./images/emaratdehdashti.jpg" alt="">
+            <span class="section_2_text">عمارت‌های تاریخی بوشهر، به‌ویژه بناهای به‌جا‌مانده از دورهٔ قاجار، نمایانگر
+                معماری بومی سازگار با اقلیم گرم و مرطوب جنوب ایران هستند. این عمارت‌ها با ویژگی‌هایی همچون بادگیرها،
+                پنجره‌های بلند، حیاط‌های مرکزی و استفاده از مصالحی مانند سنگ‌های مرجانی و گچ دریایی ساخته شده‌اند.
+                خانه‌ها و عمارت‌های قدیمی در محله‌های تاریخی بوشهر نه‌تنها محل سکونت بوده‌اند، بلکه بازتابی از سبک
+                زندگی، وضعیت اجتماعی و نقش تجاری این بندر در گذشته به‌شمار می‌روند.</span>
+        </div>
+        <div class="section2_container"><img class="section_2_img" src="./images/section2_img2.jpg" alt="">
+            <span class="section_2_text">بوشهر از جمله شهرهای باستانی جنوب ایران است که شواهد تاریخی و باستان‌شناسی،
+                قدمت سکونت در آن را به چند هزار سال پیش نسبت می‌دهند. وجود بندر تاریخی ریشهر و کشف آثار متعلق به
+                دوره‌های ایلامی، هخامنشی و ساسانی نشان می‌دهد که این منطقه همواره یکی از مراکز مهم تجاری، دریایی و تمدنی
+                در خلیج فارس بوده است. موقعیت جغرافیایی ویژهٔ بوشهر، این شهر را به یکی از نقاط کلیدی ارتباط فرهنگی و
+                اقتصادی میان ایران و تمدن‌های پیرامونی تبدیل کرده است</span>
+        </div>
+    </section>
+    <section class="wave-gallery">
+        <div class="wave-top"></div>
+
+        <div class="gallery">
+            <div class="gallery-card">
+                <img src="./images/photo_5859275874077707016_y.jpg" alt="">
+                <span class="gallery-text">غروب خورشید</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="./images/emaratmalek.jpg" alt="">
+                <span class="gallery-text">عمارت ملک</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="./images/photo_5929147694834191483_y.jpg" alt="">
+                <span class="gallery-text">دریای آبی</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="./images/photo_5929147694834191487_y.jpg" alt="">
+                <span class="gallery-text">بازار قدیم</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="./images/photo_5929147694834191486_y.jpg" alt="">
+                <span class="gallery-text">بازار ماهی فروشان</span>
+            </div>
+
+            <div class="gallery-card">
+                <img src="./images/photo_5929147694834191489_y.jpg" alt="">
+                <span class="gallery-text">ساحل دریا</span>
+            </div>
+        </div>
+
+        <div class="wave-bottom"></div>
+    </section>
+
+    <div class="text_speace">بوشهر شهری است که سفر به آن ترکیبی از طبیعت، تاریخ و فرهنگ اصیل جنوبی را پیش روی گردشگران
+        قرار می‌دهد. سواحل آرام خلیج فارس، غروب‌های تماشایی، معماری تاریخی سازگار با اقلیم گرم، و محله‌های قدیمی با
+        هویتی منحصربه‌فرد، این شهر را به مقصدی متفاوت تبدیل کرده‌اند. موسیقی محلی، غذاهای دریایی متنوع، مردمان خون‌گرم و
+        پیشینهٔ تاریخی چند هزارساله، تجربه‌ای عمیق و ماندگار از جنوب ایران فراهم می‌کند و بوشهر را به انتخابی ارزشمند
+        برای علاقه‌مندان به گردشگری فرهنگی و طبیعی بدل می‌سازد
+    </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_col">
+                <h3 class="footer_title">بوشهر</h3>
+                <p class="footer_text">دروازه‌ای آفتابی به خلیج فارس؛ جایی که دریا، تاریخ و زندگی به هم می‌رسند
+
+                </p>
+            </div>
+
+            <div class="footer_col">
+                <h4 class="footer_heading">صفحات</h4>
+                <ul class="footer_links">
+                    <li><a href="./plan.html">خانه</a></li>
+                    <li><a href="./bgh.html">بافت قدیم</a></li>
+                    <li><a href="./pg.html">خلیج فارس</a></li>
+                    <li><a href="./mt.html">مکان توریستی</a></li>
+                    <li><a href="#">خرید بلیت</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_col">
+                <h4 class="footer_heading">ارتباط با ما</h4>
+                <ul class="footer_links">
+                    <li>Email: info@bushehr.com</li>
+                    <li>Phone: +98 000 0000</li>
+                    <li>Bushehr, Iran</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            © 2026 hasti rouzehpour. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>
