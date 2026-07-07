@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" type="image/png"
+        href="./images/Gemini_Generated_Image_jr5jpejr5jpejr5j-removebg-preview.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Mirza:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>خلیج فارس</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+         :root {
+            --main-color: #91C6BC;
+            --second-color: #4B9DA9;
+            --thired-color: #F6F3C2;
+            --primary-color: #E37434;
+
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mirza", serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #2f5f63;
+}
+ .nav_countainer {
+            height: 80px;
+            width: 100%;
+            padding: 0 40px;
+            background-color: var(--second-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+
+        }
+
+        /* ===== LOGO ===== */
+        .nav_logo_place {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav_logo {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        /* ===== RIGHT SIDE ===== */
+        .nav-text {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        /* ===== NAV LIST ===== */
+        .nav_ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-direction: row-reverse;
+        }
+
+        /* ===== NAV ITEMS ===== */
+        .nav_ul_li {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        /* ===== LINKS ===== */
+        .nav_ul_li a {
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            padding: 4px 0;
+            transition: color 0.25s ease;
+        }
+
+        .nav_ul_li a:hover {
+            color: var(--thired-color);
+        }
+
+        /* ===== UNDERLINE HOVER ===== */
+        .nav_ul_li a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: var(--thired-color);
+            transition: width 0.25s ease;
+            margin-top: 6px;
+        }
+
+        .nav_ul_li a:hover::after {
+            width: 100%;
+        }
+
+       
+
+
+/* ===== HERO ===== */
+.hero {
+    height: 80vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("./images/siraf.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero_content h1 {
+    font-size: 64px;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.hero_content p {
+    font-size: 20px;
+    color: #e0f4f5;
+}
+
+/* ===== INTRO ===== */
+.intro {
+    padding: 100px 20px;
+}
+
+.intro_box {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #e6f6f7, #ffffff);
+    border-radius: 28px;
+    line-height: 2;
+    font-size: 16px;
+    box-shadow: 0 20px 50px rgba(0, 109, 119, 0.2);
+}
+
+/* ===== SPLIT SECTION ===== */
+.split_section {
+    padding: 100px 40px;
+}
+
+.split_container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.split_container img {
+    width: 50%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 25px 60px rgba(0, 109, 119, 0.25);
+}
+
+.split_text {
+    width: 50%;
+}
+
+.split_text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.split_text p {
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* ===== FACTS ===== */
+.facts {
+    padding: 100px 40px;
+    background: linear-gradient(to bottom, #f5fbfc, #ffffff);
+}
+
+.section_title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.facts_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.fact_card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 109, 119, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.fact_card:hover {
+    transform: translateY(-10px);
+}
+
+.fact_card h3 {
+    margin-bottom: 12px;
+    color: #0f7f82;
+}
+
+/* ===== GALLERY ===== */
+.gallery_section {
+    padding: 100px 40px;
+}
+
+.gallery {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 22px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+/* ===== FOOTER ===== */
+ /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(to bottom, #91C6BC, #4B9DA9);
+            color: #e9f6f7;
+            padding: 80px 40px 30px;
+        }
+
+        /* ===== FOOTER GRID ===== */
+        .footer_container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        /* ===== TITLES ===== */
+        .footer_title {
+            font-size: 28px;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .footer_heading {
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+
+        /* ===== TEXT ===== */
+        .footer_text {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* ===== LINKS ===== */
+        .footer_links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer_links li {
+            margin-bottom: 10px;
+            font-size: 14.5px;
+        }
+
+        .footer_links a {
+            text-decoration: none;
+            color: #d8f0f1;
+            transition: color 0.25s ease, padding-left 0.25s ease;
+        }
+
+        .footer_links a:hover {
+            color: #ffffff;
+            padding-left: 6px;
+        }
+
+        /* ===== BOTTOM BAR ===== */
+        .footer_bottom {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .split_container {
+        flex-direction: column;
+    }
+
+    .split_container img,
+    .split_text {
+        width: 100%;
+    }
+
+    .hero_content h1 {
+        font-size: 42px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+     <nav class="nav_countainer">
+        <div class="nav_logo_place"><img src="./images/Gemini_Generated_Image_jr5jpejr5jpejr5j-removebg-preview.png"
+                alt="logo" class="nav_logo"></div>
+        <div class="nav-text">
+            <ul class="nav_ul">
+
+                <li class="nav_ul_li"><a href="./pg.html">خلیج فارس</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="./bgh.html">بافت قدیم</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="./tsh.html">تاریخچه شهر</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="">مکان های توریستی</a></li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+    <div class="hero_content">
+        <h1>مکان های توریستی</h1>
+        <p>طبیعت، گذشته، حال، آینده</p>
+    </div>
+</header>
+
+<!-- ===== INTRO TEXT ===== -->
+<section class="intro">
+    <div class="intro_box">
+        اگر دنبال مقصدی متفاوت می‌گردید که هم طبیعت را داشته باشد، هم فرهنگ، هم آرامش و هم ماجراجویی، بوشهر می‌تواند غافلگیرتان کند. کافی‌ست یک‌بار به این شهر گرم و مهمان‌نواز سفر کنید تا متوجه شوید چرا دل کندن از آن آسان نیست.
+    </div>
+</section>
+
+<!-- ===== HISTORY ===== -->
+<section class="split_section">
+    <div class="split_container">
+        <img src="./images/palms.jpg" alt="درخت نخل">
+        <div class="split_text">
+            <h2>سوغاتی های بوشهر</h2>
+            <p>
+                گلیم و گبه، عباى پشم شتر، گرگوربافى، حصیربافى، نمدمالی، توربافی، تونیره بافی، دولچه، سفال و سرامیک از سوغاتی‌ های بوشهر هستند. اگر دوست دارید به جای لباس، سوغاتی‌های خوشمزه بگیرید، انواع خرما، حلوای مسقطی، ارده، حلوا راشی، حلوای سنگک، خارک پخته و رنگینک گزینه‌های خوبی هستند.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FACTS CARDS ===== -->
+<section class="facts">
+    <h2 class="section_title">مکان های توریستی</h2>
+
+    <div class="facts_grid">
+        <div class="fact_card">
+            <h3>گورستان سیراف</h3>
+            <p>این گورستان بین دو دره لیر و شیلو قرار دارد. اگر در زاویه مناسب بایستید، به دریا هم اشراف خواهید داشت و می‌توانید از تضاد جذاب آب و خشکی لذت ببرید.</p>
+        </div>
+
+        <div class="fact_card">
+            <h3>گور دختر</h3>
+            <p>شباهت این مقبره به پاسارگاد کوروش بزرگ اولین نشانه از تعلق آن به دوران هخامنشی یعنی ۲۵۰۰ سال قبل است، اما کسی نمی‌داند این آرامگاه را چه کسی ساخته، چرا در این نقطه ساخته شده و چه داستان‌هایی در پس آن قرار دارد. احتمال می‌رود ماندانا، مادر کوروش یا آتوسا، دختر کوروش و یا خواهر کوروش بزرگ در این مقبره دفن شده است.</p>
+        </div>
+
+        <div class="fact_card">
+            <h3>آب انبار قوام</h3>
+            <p>بنای آب انبار قوام به‌عنوان یکی از مکان های دیدنی بوشهر، معماری حیرت‌انگیزی دارد و در گذشته‌های دور یکی از مهم‌ترین منابع تامین آب آشامیدنی مردم بوشهر بوده ولی حالا به رستوان تبدیل شده و پذیرای گردشگران از شهرهای مختلف است.</p>
+        </div>
+
+        <div class="fact_card">
+            <h3>خانه قاضی بوشهر</h3>
+            <p>چوب‌های به‌کار رفته در سقف، بادگیرهایی که با دقت طراحی شده‌اند و پنجره‌های مشبک، نشان می‌دهند که این خانه برای هماهنگی با اقلیم گرم و مرطوب بوشهر ساخته شده است. خانه قاضی از جاهای دیدنی بوشهر اکنون به ثبت ملی رسیده و درهای آن به‌روی علاقه‌مندان به معماری سنتی باز است.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== IMAGE GALLERY ===== -->
+<section class="gallery_section">
+    <h2 class="section_title">تصاویر</h2>
+
+    <div class="gallery">
+        <img src="./images/203e5a8e60fa049188a3ce46bf4a87bd48337577d57b7d401b57886bf156be0b_original.jpg" alt="">
+        <img src="./images/Girl-gor-4.jpg" alt="">
+        <img src="./images/Siraf-Cemetery-21.jpg" alt="">
+        <img src="./images/naii.jpg" alt="">
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+        <div class="footer_container">
+            <div class="footer_col">
+                <h3 class="footer_title">بوشهر</h3>
+                <p class="footer_text">دروازه‌ای آفتابی به خلیج فارس؛ جایی که دریا، تاریخ و زندگی به هم می‌رسند
+
+                </p>
+            </div>
+
+            <div class="footer_col">
+                <h4 class="footer_heading">صفحات</h4>
+                <ul class="footer_links">
+                    <li><a href="./index.html">خانه</a></li>
+                    <li><a href="./bgh.html">بافت قدیم</a></li>
+                    <li><a href="./pg.html">خلیج فارس</a></li>
+                    <li><a href="./mt.html">مکان توریستی</a></li>
+                    <li><a href="#">خرید بلیت</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_col">
+                <h4 class="footer_heading">ارتباط با ما</h4>
+                <ul class="footer_links">
+                    <li>Email: info@bushehr.com</li>
+                    <li>Phone: +98 000 0000</li>
+                    <li>Bushehr, Iran</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            © 2026 hasti rouzehpour. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

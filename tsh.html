@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" type="image/png"
+        href="./images/Gemini_Generated_Image_jr5jpejr5jpejr5j-removebg-preview.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Mirza:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>بافت قدیم</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+         :root {
+            --main-color: #91C6BC;
+            --second-color: #4B9DA9;
+            --thired-color: #F6F3C2;
+            --primary-color: #E37434;
+
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mirza", serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+ .nav_countainer {
+            height: 80px;
+            width: 100%;
+            padding: 0 40px;
+            background-color: var(--second-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+
+        }
+
+        /* ===== LOGO ===== */
+        .nav_logo_place {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav_logo {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        /* ===== RIGHT SIDE ===== */
+        .nav-text {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        /* ===== NAV LIST ===== */
+        .nav_ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-direction: row-reverse;
+        }
+
+        /* ===== NAV ITEMS ===== */
+        .nav_ul_li {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        /* ===== LINKS ===== */
+        .nav_ul_li a {
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            padding: 4px 0;
+            transition: color 0.25s ease;
+        }
+
+        .nav_ul_li a:hover {
+            color: var(--thired-color);
+        }
+
+        /* ===== UNDERLINE HOVER ===== */
+        .nav_ul_li a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: var(--thired-color);
+            transition: width 0.25s ease;
+            margin-top: 6px;
+        }
+
+        .nav_ul_li a:hover::after {
+            width: 100%;
+        }
+
+       
+
+
+/* ===== HERO ===== */
+.hero {
+    height: 80vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("./images/بوشهر\ قدیم\ به\ روایت\ تصویر.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero_content h1 {
+    font-size: 64px;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.hero_content p {
+    font-size: 20px;
+    color: #e0f4f5;
+}
+
+/* ===== INTRO ===== */
+.intro {
+    padding: 100px 20px;
+}
+
+.intro_box {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #F6F3C2, #ffffff);
+    border-radius: 28px;
+    line-height: 2;
+    font-size: 16px;
+    box-shadow: 0 20px 50px rgb(246, 243, 194);
+}
+
+/* ===== SPLIT SECTION ===== */
+.split_section {
+    padding: 100px 40px;
+}
+
+.split_container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.split_container img {
+    width: 50%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 25px 60px rgb(246, 243, 194);
+}
+
+.split_text {
+    width: 50%;
+}
+
+.split_text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.split_text p {
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* ===== FACTS ===== */
+.facts {
+    padding: 100px 40px;
+    background: linear-gradient(to bottom, #f5fbfc, #ffffff);
+}
+
+.section_title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.facts_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.fact_card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgb(246, 243, 194);
+    transition: transform 0.3s ease;
+}
+
+.fact_card:hover {
+    transform: translateY(-10px);
+}
+
+.fact_card h3 {
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+
+/* ===== GALLERY ===== */
+.gallery_section {
+    padding: 100px 40px;
+}
+
+.gallery {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 22px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+
+ /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(to bottom, #91C6BC, #4B9DA9);
+            color: #e9f6f7;
+            padding: 80px 40px 30px;
+        }
+
+        /* ===== FOOTER GRID ===== */
+        .footer_container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        /* ===== TITLES ===== */
+        .footer_title {
+            font-size: 28px;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .footer_heading {
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+
+        /* ===== TEXT ===== */
+        .footer_text {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* ===== LINKS ===== */
+        .footer_links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer_links li {
+            margin-bottom: 10px;
+            font-size: 14.5px;
+        }
+
+        .footer_links a {
+            text-decoration: none;
+            color: #d8f0f1;
+            transition: color 0.25s ease, padding-left 0.25s ease;
+        }
+
+        .footer_links a:hover {
+            color: #ffffff;
+            padding-left: 6px;
+        }
+
+        /* ===== BOTTOM BAR ===== */
+        .footer_bottom {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .split_container {
+        flex-direction: column;
+    }
+
+    .split_container img,
+    .split_text {
+        width: 100%;
+    }
+
+    .hero_content h1 {
+        font-size: 42px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+     <nav class="nav_countainer">
+        <div class="nav_logo_place"><img src="./images/Gemini_Generated_Image_jr5jpejr5jpejr5j-removebg-preview.png"
+                alt="logo" class="nav_logo"></div>
+        <div class="nav-text">
+            <ul class="nav_ul">
+
+                <li class="nav_ul_li"><a href="./pg.html">خلیج فارس</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="./bgh.html">بافت قدیم</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="./tsh.html">تاریخچه شهر</a></li>
+
+
+
+                <li class="nav_ul_li"><a href="./mt.html">مکان های توریستی</a></li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+    <div class="hero_content">
+        <h1>تاریخچه بوشهر </h1>
+        <p>ماشین زمان به تاریخ بوشهر</p>
+    </div>
+</header>
+
+<!-- ===== INTRO TEXT ===== -->
+<section class="intro">
+    <div class="intro_box">
+        بوشهر یکی از شهرهای مهم و تأثیرگذار جنوب ایران است که در طول تاریخ به‌عنوان بندری راهبردی در سواحل خلیج فارس شناخته می‌شده است. موقعیت جغرافیایی ویژهٔ این شهر سبب شده بوشهر همواره نقش مهمی در تجارت دریایی، ارتباطات فرهنگی و تحولات سیاسی منطقه ایفا کند. حضور قدرت‌های داخلی و خارجی، رونق بازرگانی و شکل‌گیری محله‌ها و بناهای تاریخی، جایگاه بوشهر را در تاریخ ایران برجسته ساخته است.
+    </div>
+</section>
+
+<!-- ===== HISTORY ===== -->
+<section class="split_section">
+    <div class="split_container">
+        <img src="./images/bushehr-01.jpg" alt="تاریخ خلیج فارس">
+        <div class="split_text">
+            <h2>تاریخچه بافت قدیم</h2>
+            <p>پیشینهٔ سکونت در منطقهٔ بوشهر به هزاران سال پیش و دوران تمدن‌های باستانی مانند ایلامیان بازمی‌گردد. در دوره‌های هخامنشی و ساسانی، این منطقه با نام‌هایی چون ریشهر شناخته می‌شد و از بنادر مهم ایران به‌شمار می‌رفت. بوشهر در دورهٔ صفویه و به‌ویژه قاجار به اوج اهمیت خود رسید و به مرکز اصلی تجارت دریایی، روابط دیپلماتیک و فعالیت‌های اقتصادی ایران در خلیج فارس تبدیل شد.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FACTS CARDS ===== -->
+<section class="facts">
+    <h2 class="section_title">دانستنی‌های جالب</h2>
+
+    <div class="facts_grid">
+        <div class="fact_card">
+            
+            <p>بوشهر در دورهٔ قاجار محل استقرار کنسولگری‌های چند کشور اروپایی بوده است.</p>
+        </div>
+
+        <div class="fact_card">
+            
+            <p>بندر تاریخی ریشهر در نزدیکی بوشهر، یکی از قدیمی‌ترین بنادر شناخته‌شده ایران است.</p>
+        </div>
+
+        <div class="fact_card">
+            
+            <p>بوشهر نخستین شهر جنوب ایران بود که چاپخانه و مدرسهٔ نوین در آن تأسیس شد.</p>
+        </div>
+
+        <div class="fact_card">
+            
+            <p>این شهر نقش مهمی در مقاومت مردم جنوب ایران در برابر نفوذ استعمارگران داشته است.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== IMAGE GALLERY ===== -->
+<section class="gallery_section">
+    <h2 class="section_title">تصاویر بوشهر قدیم</h2>
+
+    <div class="gallery">
+        <img src="./images/bushehr-29.jpg" alt="">
+        <img src="./images/20220126-101659-9597-history-min.jpg" alt="">
+        <img src="./images/Bushehr-header.jpg" alt="">
+        <img src="./images/Tasavir_SH_booshehr_kenisa_Untitlxfxfded-1.jpg" alt="">
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+        <div class="footer_container">
+            <div class="footer_col">
+                <h3 class="footer_title">بوشهر</h3>
+                <p class="footer_text">دروازه‌ای آفتابی به خلیج فارس؛ جایی که دریا، تاریخ و زندگی به هم می‌رسند
+
+                </p>
+            </div>
+
+            <div class="footer_col">
+                <h4 class="footer_heading">صفحات</h4>
+                <ul class="footer_links">
+                    <li><a href="./index.html">خانه</a></li>
+                    <li><a href="./bgh.html">بافت قدیم</a></li>
+                    <li><a href="./pg.html">خلیج فارس</a></li>
+                    <li><a href="./mt.html">مکان توریستی</a></li>
+                    <li><a href="#">خرید بلیت</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_col">
+                <h4 class="footer_heading">ارتباط با ما</h4>
+                <ul class="footer_links">
+                    <li>Email: info@bushehr.com</li>
+                    <li>Phone: +98 000 0000</li>
+                    <li>Bushehr, Iran</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            © 2026 hasti rouzehpour. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
